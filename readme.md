@@ -57,14 +57,14 @@ _Arguments:_
 * unsigned long code - The keycode (see the tutorial above to get this)
 * void (*cb) (unsigned long code) - The function to call, i.e. void cb(unsigned long code){}
 
-onhold(code, everyMicro, cb)
+onhold(code, everyMillis, cb)
 ----------------------------
-Setup a handler for holding down the button signified by the given keycode. The function cb will be called as often as "everyMicro" while a holding-down code is being received. 
+Setup a handler for holding down the button signified by the given keycode. The function cb will be called as often as "everyMillis" while a holding-down code is being received. 
 
 _Arguments:_
 * unsigned long code - The keycode
-* unsigned long everyMicro - How often to call the callback function in microseconds. Note that this is a lower limit.
-* void (*cb) (unsigned long code, unsigned long ms) - The function to call whenever the key is being held down. The callback will be called with the keycode that was held (the original, not the repeater), and the number of microseconds since it was originally pressed. ex: , i.e. void cb(unsigned long code, unsigned long ms){}
+* unsigned long everyMillis - How often to call the callback function in milliseconds. Note that this is a lower limit.
+* void (*cb) (unsigned long code, unsigned long ms) - The function to call whenever the key is being held down. The callback will be called with the keycode that was held (the original, not the repeater), and the number of milliseconds since it was originally pressed. ex: , i.e. void cb(unsigned long code, unsigned long ms){}
 
 onhold(code, cb)
 ----------------
@@ -77,13 +77,13 @@ Setup a handler for when one of the number keys is pressed. See Setting up numbe
 _Arguments:_
 * void (*cb) (int num) - The function to call when one of the number keys is pressed. Which number key (0-9) was pressed is passed in. ex: void cb(int numberKey){}
 
-onnumhold(everyMicro, cb)
+onnumhold(everyMillis, cb)
 -------------------------
-Setup a handler for holding down one of the number buttons. The function cb will be called as often as "everyMicro" while holding the number key.
+Setup a handler for holding down one of the number buttons. The function cb will be called as often as "everyMillis" while holding the number key.
 
 _Arguments:_
-* unsigned long everyMicro - How often to call the callback function in microseconds. Note that this is a lower limit.
-* void (*cb) (int num, unsigned long microsSincePress) - The function to call when a number key is being held down. The callback will be called with the 0-9 number of the key that was held originally, and the number of microseconds since it was originally pressed. ex: , i.e. void cb(int num, unsigned long ms){}
+* unsigned long everyMillis - How often to call the callback function in milliseconds. Note that this is a lower limit.
+* void (*cb) (int num, unsigned long millisSincePress) - The function to call when a number key is being held down. The callback will be called with the 0-9 number of the key that was held originally, and the number of milliseconds since it was originally pressed. ex: , i.e. void cb(int num, unsigned long ms){}
 
 onnumhold(cb)
 -------------
