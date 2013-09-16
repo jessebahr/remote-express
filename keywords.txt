@@ -1,0 +1,13 @@
+RemoteExpress	KEYWORD1
+
+#Methods
+attach	KEYWORD2
+run	KEYWORD2
+onpress	KEYWORD2
+onhold	KEYWORD2
+onhold	KEYWORD2
+
+setNum	KEYWORD2
+onnumpress	KEYWORD2
+onnumhold	KEYWORD2
+onnumhold	KEYWORD2
