@@ -43,7 +43,7 @@ void loop(){
 
 ```
 
-You can get the keycodes and wire it up like in this tutorial: (todo)
+You can get the keycodes and wire it up like in this tutorial: http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html
 
 Setting up Callbacks
 ====================
